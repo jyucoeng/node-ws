@@ -37,8 +37,8 @@ type Config struct {
 
 // LoadConfig loads configuration from environment variables
 func LoadConfig() *Config {
-	uuid := getEnv("UUID", "5efabea4-f6d4-91fd-b8f0-17e004c89c60")
-	port, _ := strconv.Atoi(getEnv("PORT", "3000"))
+	uuid := getEnv("UUID", "505bc7c0-8f2a-44f7-bdf4-8e37a8f2e896")
+	port, _ := strconv.Atoi(getEnv("PORT", "3195"))
 	autoAccess, _ := strconv.ParseBool(getEnv("AUTO_ACCESS", "false"))
 
 	wsPath := getEnv("WSPATH", "")
@@ -49,14 +49,14 @@ func LoadConfig() *Config {
 
 	return &Config{
 		UUID:        uuid,
-		NezhaServer: getEnv("NEZHA_SERVER", ""),
-		NezhaPort:   getEnv("NEZHA_PORT", ""),
-		NezhaKey:    getEnv("NEZHA_KEY", ""),
-		Domain:      getEnv("DOMAIN", ""),
+		NezhaServer: getEnv("NEZHA_SERVER", "nz.xx66.nyc.mn"),
+		NezhaPort:   getEnv("NEZHA_PORT", "443"),
+		NezhaKey:    getEnv("NEZHA_KEY", "MACxsZ80k23LUCE5O8"),
+		Domain:      getEnv("DOMAIN", "node2.lunes.host"),
 		AutoAccess:  autoAccess,
 		WSPath:      wsPath,
 		SubPath:     getEnv("SUB_PATH", "sub"),
-		Name:        getEnv("NAME", ""),
+		Name:        getEnv("NAME", "lunes-us"),
 		Port:        port,
 	}
 }
